@@ -33,7 +33,7 @@ const updateUi = () => {
 
   startMessage.classList.toggle('hidden', gameStatus !== 'idle');
   winMessage.classList.toggle('hidden', gameStatus !== 'win');
-  loseMessage.classList.toggle('hidden', gameStatus !== 'game over');
+  loseMessage.classList.toggle('hidden', gameStatus !== 'lose');
 
   if (gameStatus === 'playing') {
     button.textContent = 'Restart';
@@ -42,7 +42,7 @@ const updateUi = () => {
 };
 
 const handleMove = (direction) => {
-  if (game.getStatus() === 'game over') {
+  if (game.getStatus() === 'lose') {
     return;
   }
 

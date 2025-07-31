@@ -116,7 +116,7 @@ export default class Game {
         }
       }
     }
-    this.status = 'game over';
+    this.status = 'lose';
   }
 
   _handleMove(logic) {
